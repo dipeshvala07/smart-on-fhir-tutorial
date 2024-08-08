@@ -30,27 +30,10 @@
       
             FHIR.oauth2.authorize({
 
-              // The client_id that you should have obtained after registering a client at
-              // the EHR.              
-				//below is temp clietid SCM Provider Client(Test)
-				clientId:"B352174B-5213-4A7F-9120-A6EDE8DF0478",
-				clientSecret:"6D9CE862EB6E",
-              // The scopes that you request from the EHR. In this case we want to:
-              // launch            - Get the launch context
-              // openid & fhirUser - Get the current user
-              // patient/*.read    - Read patient data
-              scope: "user/*.read",
-              // Typically, if your redirectUri points to the root of the current directory
-              // (where the launchUri is), you can omit this option because the default value is
-              // ".". However, some servers do not support directory indexes so "." and "./"
-              // will not automatically map to the "index.html" file in that directory.
-              redirectUri: "index.html"
-			  
-			  
-			  
-			  //clientId:"5dad63f2-42c7-4d13-ae3a-7964ccf9cfa1",
-			  //clientSecret:"MkloLwoMIjAMh1bVweCGRaom3l4haybnm4UkB-DlTvOAnIubC4HTZcZgivGAOUfMH3fiisnjBzqe6tMVb43sWQ",
-				//redirectUri:"https://inferno.healthit.gov/inferno/oauth2/static/redirect"
+      FHIR.oauth2.authorize({
+        'client_id': 'B352174B-5213-4A7F-9120-A6EDE8DF0478',
+        'scope':  'user/*.read'
+      });
 				
             });
     </script>
